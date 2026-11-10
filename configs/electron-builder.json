@@ -1,0 +1,216 @@
+{
+  "appId": "org.aiof.desktop",
+  "productName": "AIOF",
+  "asar": true,
+  "directories": {
+    "output": "release"
+  },
+  "files": [
+    "dist/**/*",
+    "app/main/**/*",
+    "package.json",
+    "!platform/**/*",
+    "!docs/**/*",
+    "!configs/**/*"
+  ],
+  "extraMetadata": {
+    "main": "app/main/main.cjs"
+  },
+  "linux": {
+    "category": "Utility;FileManager;",
+    "target": [
+      "deb",
+      "rpm",
+      "AppImage"
+    ],
+    "maintainer": "AIOF contributors",
+    "synopsis": "All-in-one file manager and productivity workspace",
+    "description": "AIOF combines file management, downloads, torrent control, archive tools and media previews in one desktop application.",
+    "packageCategory": "Utility",
+    "executableName": "aiof",
+    "artifactName": "AIOF-${version}-${arch}.${ext}",
+    "icon": "resources/branding/aiof-logo.png",
+    "mimeTypes": [
+      "application/pdf",
+      "image/png",
+      "image/jpeg",
+      "image/webp",
+      "image/gif",
+      "image/svg+xml",
+      "video/mp4",
+      "video/x-matroska",
+      "audio/mpeg",
+      "audio/flac",
+      "application/zip",
+      "application/x-7z-compressed",
+      "text/plain",
+      "text/markdown",
+      "application/json",
+      "text/csv",
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+    ],
+    "extraResources": [
+      {
+        "from": "resources/engines/linux",
+        "to": "engines",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "deb": {
+    "depends": [
+      "libgtk-3-0",
+      "libnss3",
+      "libxss1",
+      "libasound2"
+    ],
+    "afterRemove": "platform/linux/after-remove.sh"
+  },
+  "rpm": {
+    "afterRemove": "platform/linux/after-remove.sh"
+  },
+  "win": {
+    "target": [
+      "nsis",
+      "portable"
+    ],
+    "artifactName": "AIOF-${version}-${arch}.${ext}",
+    "icon": "resources/branding/aiof-icon.ico",
+    "extraResources": [
+      {
+        "from": "resources/engines/windows",
+        "to": "engines",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "nsis": null,
+  "extraResources": [
+    {
+      "from": "resources/engines/common",
+      "to": "engines",
+      "filter": [
+        "**/*"
+      ]
+    },
+    {
+      "from": "resources/branding",
+      "to": "branding",
+      "filter": [
+        "**/*"
+      ]
+    }
+  ],
+  "fileAssociations": [
+    {
+      "ext": [
+        "pdf"
+      ],
+      "name": "PDF document",
+      "role": "Viewer"
+    },
+    {
+      "ext": [
+        "png",
+        "jpg",
+        "jpeg",
+        "webp",
+        "bmp",
+        "gif",
+        "svg",
+        "tif",
+        "tiff",
+        "avif"
+      ],
+      "name": "Image file",
+      "role": "Viewer"
+    },
+    {
+      "ext": [
+        "mp4",
+        "m4v",
+        "mkv",
+        "avi",
+        "mov",
+        "webm",
+        "mp3",
+        "wav",
+        "flac",
+        "ogg",
+        "m4a",
+        "aac",
+        "opus"
+      ],
+      "name": "Media file",
+      "role": "Viewer"
+    },
+    {
+      "ext": [
+        "txt",
+        "md",
+        "markdown",
+        "json",
+        "js",
+        "jsx",
+        "ts",
+        "tsx",
+        "css",
+        "html",
+        "xml",
+        "yml",
+        "yaml",
+        "toml",
+        "ini",
+        "log",
+        "conf",
+        "sh",
+        "ps1",
+        "py",
+        "rs",
+        "go",
+        "c",
+        "h",
+        "cpp",
+        "hpp"
+      ],
+      "name": "Text and source file",
+      "role": "Editor"
+    },
+    {
+      "ext": [
+        "zip",
+        "7z",
+        "rar",
+        "tar",
+        "gz",
+        "bz2",
+        "xz"
+      ],
+      "name": "Archive file",
+      "role": "Viewer"
+    },
+    {
+      "ext": [
+        "docx",
+        "xlsx",
+        "pptx",
+        "odt",
+        "ods",
+        "odp",
+        "doc",
+        "xls",
+        "ppt",
+        "rtf",
+        "csv"
+      ],
+      "name": "Office document",
+      "role": "Editor"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+Stage VLC and its full plugin/runtime directory here if you want video/audio playback beyond Chromium-supported formats inside AIOF's file preview. Keep the VLC license notices and plugins with the staged runtime. AIOF opens the file in VLC for the full toolset.

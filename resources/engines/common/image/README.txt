@@ -1,0 +1,1 @@
+Place the image executable built for the current target operating system in this directory. The AIOF build copies resources/engines into the application install. See docs/ENGINE-INTEGRATION.md for names and upstream license obligations.

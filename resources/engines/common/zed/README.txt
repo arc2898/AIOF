@@ -1,0 +1,1 @@
+Zed is launched from its official installed location or PATH. If distributing a staged runtime, review Zed's current license, notices, trademark policy and platform dependencies first. AIOF does not redistribute Zed binaries. Official install scripts are in platform/windows/install-zed.ps1 and platform/linux/install-zed.sh.

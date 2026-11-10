@@ -1,0 +1,1 @@
+AIOF bundled 7-Zip engine for Linux x86_64. Built from the supplied 7-Zip source. The runtime executable is 7z and the Format7zF module is 7z.so. Windows binaries are built separately on a Windows toolchain and must never be replaced with this Linux ELF build. See platform/linux/build-7zip.sh.

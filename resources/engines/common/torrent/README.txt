@@ -1,0 +1,1 @@
+Stage the qBittorrent runtime here before building AIOF. Windows: qBittorrent.exe plus its required Qt/DLL dependencies. Linux: qbittorrent-nox executable. Use the matching platform architecture. AIOF starts the process with a private profile, localhost-only Web UI and downloads in ~/Downloads/AIOF (or the Windows Downloads folder). See platform/*/stage-engines.*.
